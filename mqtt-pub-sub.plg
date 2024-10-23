@@ -13,9 +13,7 @@
 <!ENTITY packages  "/boot/config/plugins/&name;/pkg">
 <!ENTITY md5       "f084c2f4eeef42b63b133dc3f6a6f418">
 ]>
-<PLUGIN name="&name;" author="&author;" version="&version;" 
-icon="icon-ups" 
-launch="&launch;" pluginURL="&pluginURL;" min="6.11.5">
+<PLUGIN name="&name;" author="&author;" version="&version;" icon="icon-ups" launch="&launch;" pluginURL="&pluginURL;" min="6.11.5">
  
  <CHANGES>
 
