@@ -11,7 +11,7 @@
 <!ENTITY plgNAME   "&name;-&version;-x86_64">
 <!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
 <!ENTITY packages  "/boot/config/plugins/&name;/pkg">
-<!ENTITY md5       "f084c2f4eeef42b63b133dc3f6a6f418">
+<!ENTITY md5       "3a6f97d2ffaad11e62dc13b6d3f797e9">
 ]>
 <PLUGIN name="&name;" 
         author="&author;" 
