@@ -1,0 +1,49 @@
+<?xml version='1.0' standalone='yes'?>
+<!DOCTYPE PLUGIN [
+<!ENTITY name      "MQTT Pub & Sub">
+<!ENTITY author    "giganode">
+<!ENTITY version   "2024.10.23">
+<!ENTITY launch    "Settings/MQTTSettings">
+<!ENTITY gitURL    "https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master">
+<!ENTITY pluginURL "&gitURL;/&name;.plg">
+<!ENTITY pkgURL    "&gitURL;/pkg">
+<!ENTITY plgPATH   "/boot/config/plugins/&name;">
+<!ENTITY plgNAME   "&name;-&version;-x86_64">
+<!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
+<!ENTITY packages  "/boot/config/plugins/&name;/pkg">
+<!ENTITY md5       "f084c2f4eeef42b63b133dc3f6a6f418">
+]>
+<PLUGIN name="&name;" author="&author;" version="&version;" 
+icon="https://github.com/giganode/unraid-mqtt-pub-sub/blob/8c0392e4065a0469bfff895822847d9d0852edbc/src/mqtt-pub-sub/usr/local/emhttp/plugins/mqtt-pub-sub/icons/favicon.png" 
+launch="&launch;" pluginURL="&pluginURL;" min="6.11.5">
+ 
+ <CHANGES>
+
+ ##2024.10.23
+
+    - Initial Relase.
+
+ </CHANGES>
+
+ <FILE Name="&plgPATH;/&plgNAME;.txz" Run="upgradepkg --install-new">
+  <URL>&pkgURL;/&plgNAME;.txz</URL>
+ </FILE>
+
+<FILE Run="/bin/bash">
+<INLINE>
+
+
+
+</INLINE>
+</FILE>
+
+ <FILE Run="/bin/bash" Method="remove">
+  <INLINE>
+   echo "Removing &name;..."
+   removepkg &plgPATH;/*.txz
+   rm -rf &plgPATH;
+   rm -rf &emhttp;
+   echo "&name; has been removed"
+  </INLINE>
+ </FILE>
+</PLUGIN>
