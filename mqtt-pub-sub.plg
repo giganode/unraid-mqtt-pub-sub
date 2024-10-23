@@ -14,7 +14,7 @@
 <!ENTITY md5       "f084c2f4eeef42b63b133dc3f6a6f418">
 ]>
 <PLUGIN name="&name;" author="&author;" version="&version;" 
-icon="https://github.com/giganode/unraid-mqtt-pub-sub/blob/8c0392e4065a0469bfff895822847d9d0852edbc/src/mqtt-pub-sub/usr/local/emhttp/plugins/mqtt-pub-sub/icons/favicon.png" 
+icon="icon-ups" 
 launch="&launch;" pluginURL="&pluginURL;" min="6.11.5">
  
  <CHANGES>
