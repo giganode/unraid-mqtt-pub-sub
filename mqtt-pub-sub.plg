@@ -1,6 +1,6 @@
 <?xml version='1.0' standalone='yes'?>
 <!DOCTYPE PLUGIN [
-<!ENTITY name      "MQTT Pub & Sub">
+<!ENTITY name      "mqtt-pub-sub">
 <!ENTITY author    "giganode">
 <!ENTITY version   "2024.10.23">
 <!ENTITY launch    "Settings/MQTTSettings">
