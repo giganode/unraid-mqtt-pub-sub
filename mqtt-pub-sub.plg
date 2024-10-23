@@ -18,7 +18,8 @@
         version="&version;" 
         launch="&launch;" 
         pluginURL="&pluginURL;" 
-        min="6.12.4">
+        min="6.12.4"
+        support="https://forums.unraid.net/topic/177974-plugin-mqtt-pub-sub-support-page/">
  
  <CHANGES>
 
