@@ -28,7 +28,43 @@
  </FILE>
 
 <FILE Run="/bin/bash">
+<INLINE>
+echo "Checking executable flags..."
 
+if [ -f /usr/local/bin/mosquitto_pub ]; then
+    if [ ! -x /usr/local/bin/mosquitto_pub ]; then
+        chmod +x /usr/local/bin/mosquitto_pub
+        echo "mosquitto_pub is now executable."
+    else
+        echo "mosquitto_pub already was executable."
+    fi
+else
+    echo "mosquitto_pub doesn't exist."
+fi
+
+if [ -f /usr/local/bin/mosquitto_sub ]; then
+    if [ ! -x /usr/local/bin/mosquitto_sub ]; then
+        chmod +x /usr/local/bin/mosquitto_sub
+        echo "mosquitto_sub is now executable."
+    else
+        echo "mosquitto_sub already was executable."
+    fi
+else
+    echo "mosquitto_sub doesn't exist."
+fi
+
+if [ -f /usr/local/bin/bc ]; then
+    if [ ! -x /usr/local/bin/bc ]; then
+        chmod +x /usr/local/bin/bc
+        echo "bc is now executable."
+    else
+        echo "bc already was executable."
+    fi
+else
+    echo "bc doesn't exist."
+fi
+
+</INLINE>
 </FILE>
 
  <FILE Run="/bin/bash" Method="remove">
