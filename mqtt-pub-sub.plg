@@ -28,11 +28,7 @@
  </FILE>
 
 <FILE Run="/bin/bash">
-<INLINE>
 
-
-
-</INLINE>
 </FILE>
 
  <FILE Run="/bin/bash" Method="remove">
