@@ -1,0 +1,33 @@
+Menu="Utilities"
+Icon="icon.png"
+Title="MQTT"
+---
+<?php
+$mqttcredentials                = parse_ini_file("/boot/config/mqttcredentials",true);
+$mqttcredentials_host           = isset($mqttcredentials['MQTT_HOST']) ? $mqttcredentials['MQTT_HOST'] : "";
+$mqttcredentials_port           = isset($mqttcredentials['MQTT_PORT']) ? $mqttcredentials['MQTT_PORT'] : "";
+$mqttcredentials_user           = isset($mqttcredentials['MQTT_USER']) ? $mqttcredentials['MQTT_USER'] : "";
+$mqttcredentials_password       = isset($mqttcredentials['MQTT_PASSWORD']) ? $mqttcredentials['MQTT_PASSWORD'] : "";
+$mqttcredentials_client_id      = isset($mqttcredentials['MQTT_CLIENT_ID']) ? $mqttcredentials['MQTT_CLIENT_ID'] : "";
+?>
+
+<form markdown="1" method="POST" action="/update.php" target="progressFrame">
+<input type="hidden" name="#file" value="/boot/config/mqttcredentials" />
+
+MQTT Host:
+: <input type="text" name="MQTT_HOST" class="narrow" maxlength="20" value="<?=$mqttcredentials_host;?>" placeholder="IP or Hostname" >
+
+MQTT Port:
+: <input type="text" name="MQTT_PORT" class="narrow" maxlength="20" value="<?=$mqttcredentials_port;?>" placeholder="Host Port" >
+
+MQTT User:
+: <input type="text" name="MQTT_USER" class="narrow" maxlength="20" value="<?=$mqttcredentials_user;?>" placeholder="username" >
+
+MQTT Password:
+: <input type="password" name="MQTT_PASSWORD" class="narrow" maxlength="20" value="<?=$mqttcredentials_password;?>" placeholder="password" >
+
+MQTT Client ID:
+: <input type="text" name="MQTT_CLIENT_ID" class="narrow" maxlength="20" value="<?=$mqttcredentials_client_id;?>" placeholder="servername-unraid" >
+
+: <input id="btnApply" type="submit" value="Apply"><input type="button" value="Done" onClick="done()">
+</form>
