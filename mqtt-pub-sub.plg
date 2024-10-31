@@ -21,19 +21,27 @@
         min="6.12.4"
         support="https://forums.unraid.net/topic/177974-plugin-mqtt-pub-sub-support-page/">
  
- <CHANGES>
+<CHANGES>
 
- ###2024.10.31
- - Added form to edit credentials to settings page.
+###2024.10.31
+- Added form to edit credentials to settings page.
 
- ###2024.10.23
- - Initial Release.
+###2024.10.23
+- Initial Release.
 
- </CHANGES>
+</CHANGES>
 
- <FILE Name="&plgPATH;/&plgNAME;.txz" Run="upgradepkg --install-new">
-  <URL>&pkgURL;/&plgNAME;.txz</URL>
- </FILE>
+<FILE Name="&plgPATH;/&plgNAME;.txz" Run="upgradepkg --install-new">
+ <URL>&pkgURL;/&plgNAME;.txz</URL>
+</FILE>
+
+<FILE Name="&emhttp;/README.md">
+<INLINE>
+**MQTT Pub and Sub**
+
+Plugin that adds the ability to publish to a mqtt broker or subscribe to a topic.
+</INLINE>
+</FILE>
 
 <FILE Run="/bin/bash">
 <INLINE>
