@@ -1,5 +1,5 @@
 Menu="Utilities"
-Icon="icon.png"
+Icon="mqtt-pub-sub.png"
 Title="MQTT"
 ---
 <?php
