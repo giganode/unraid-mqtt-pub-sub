@@ -29,5 +29,9 @@ MQTT Password:
 MQTT Client ID:
 : <input type="text" name="MQTT_CLIENT_ID" class="narrow" maxlength="20" value="<?=$mqttcredentials_client_id;?>" placeholder="servername-unraid" >
 
-: <input id="btnApply" type="submit" value="Apply"><input type="button" value="Done" onClick="done()">
+<div style="text-align: center;">
+    <input id="btnApply" type="submit" value="Apply">
+    <input type="button" value="Done" onClick="done()">
+</div>
+
 </form>
