@@ -23,13 +23,11 @@
  
  <CHANGES>
 
- ##2024.10.31
+ ###2024.10.31
+ - Added form to edit credentials to settings page.
 
-    - Added form to edit credentials to settings page.
-
- ##2024.10.23
-
-    - Initial Release.
+ ###2024.10.23
+ - Initial Release.
 
  </CHANGES>
 
