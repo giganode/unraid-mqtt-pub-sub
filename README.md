@@ -11,9 +11,9 @@ https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-s
 ## Usage
 
 ### Preparation
-Enter your mqtt credentials here:
+Enter your mqtt credentials under Settings Page.
 ```
-/boot/config/mqttcredentials
+Settings --> MQTT
 ```
 
 ### Publishing
