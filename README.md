@@ -17,7 +17,7 @@ Settings --> MQTT
 ```
 
 ### Publishing
-Start with this template:
+Old template:
 ```
 #!/bin/bash
 
@@ -30,6 +30,21 @@ fi
 
 mosquitto_pub -h $MQTT_HOST -p $MQTT_PORT -i $MQTT_CLIENT_ID -u $MQTT_USER -P $MQTT_PASSWORD -t "$MQTT_CLIENT_ID/sensor/voltage" -m "{\"voltage\": $value}"
 
+```
+New template with shortened command line for publishing:
+```
+#!/bin/bash
+
+source /boot/config/mqttcredentials
+
+if [[ -z "$MQTT_HOST" || -z "$MQTT_PORT" || -z "$MQTT_USER" || -z "$MQTT_PASSWORD" || -z "$MQTT_CLIENT_ID" ]]; then
+  echo "Error: Information missing."
+  exit 1
+fi
+
+MQTT_URL=mqtt://$MQTT_USER:$MQTT_PASSWORD@$MQTT_HOST:$MQTT_PORT/$MQTT_CLIENT_ID
+
+mosquitto_pub -L "$MQTT_URL/sensor/voltage" -m "{\"voltage\": $voltage}"
 ```
 
 ### Subscribing
